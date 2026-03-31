@@ -1,0 +1,1111 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>株式会社OKIDAI｜確かな技術と信頼で、現場を支える。</title>
+<meta name="description" content="株式会社OKIDAIは愛知県一宮市を拠点に、とび・土工工事、ユニック車オペレーションを展開する建設会社です。">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;600;700;900&display=swap" rel="stylesheet">
+<style>
+*, *::before, *::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --navy: #1a3a5c;
+  --navy-dark: #0f2640;
+  --navy-light: #2a5a8c;
+  --gold: #e8a025;
+  --gold-light: #f0b840;
+  --gold-pale: #fdf5e6;
+  --white: #ffffff;
+  --gray-50: #f8f9fa;
+  --gray-100: #f0f1f3;
+  --gray-200: #e2e4e8;
+  --gray-600: #6b7280;
+  --gray-700: #4a5568;
+  --gray-800: #2d3748;
+  --text: #1a202c;
+  --shadow: 0 4px 20px rgba(0,0,0,0.08);
+  --shadow-lg: 0 8px 40px rgba(0,0,0,0.12);
+}
+
+html {
+  scroll-behavior: smooth;
+  scroll-padding-top: 80px;
+}
+
+body {
+  font-family: 'Noto Sans JP', sans-serif;
+  font-weight: 400;
+  color: var(--text);
+  line-height: 1.8;
+  background: var(--white);
+  -webkit-font-smoothing: antialiased;
+}
+
+/* ===== HEADER ===== */
+.header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 1000;
+  background: var(--white);
+  box-shadow: 0 2px 12px rgba(0,0,0,0.06);
+  transition: background 0.3s;
+}
+
+.header-inner {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 0 24px;
+  height: 72px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  text-decoration: none;
+  color: var(--navy);
+}
+
+.logo-icon {
+  width: 40px;
+  height: 40px;
+  background: var(--navy);
+  border-radius: 8px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--gold);
+  font-weight: 900;
+  font-size: 16px;
+  letter-spacing: -0.5px;
+}
+
+.logo-text {
+  font-weight: 700;
+  font-size: 20px;
+  color: var(--navy);
+  letter-spacing: 1px;
+}
+
+.nav {
+  display: flex;
+  align-items: center;
+  gap: 32px;
+}
+
+.nav a {
+  text-decoration: none;
+  color: var(--gray-700);
+  font-size: 14px;
+  font-weight: 500;
+  transition: color 0.2s;
+  position: relative;
+}
+
+.nav a:hover {
+  color: var(--navy);
+}
+
+.nav a::after {
+  content: '';
+  position: absolute;
+  bottom: -4px;
+  left: 0;
+  width: 0;
+  height: 2px;
+  background: var(--gold);
+  transition: width 0.3s;
+}
+
+.nav a:hover::after {
+  width: 100%;
+}
+
+/* Hamburger */
+.hamburger {
+  display: none;
+  flex-direction: column;
+  gap: 5px;
+  cursor: pointer;
+  padding: 8px;
+  background: none;
+  border: none;
+  z-index: 1001;
+}
+
+.hamburger span {
+  display: block;
+  width: 24px;
+  height: 2px;
+  background: var(--navy);
+  transition: all 0.3s;
+}
+
+.hamburger.active span:nth-child(1) {
+  transform: rotate(45deg) translate(5px, 5px);
+}
+
+.hamburger.active span:nth-child(2) {
+  opacity: 0;
+}
+
+.hamburger.active span:nth-child(3) {
+  transform: rotate(-45deg) translate(5px, -5px);
+}
+
+/* ===== HERO ===== */
+.hero {
+  margin-top: 72px;
+  background: linear-gradient(135deg, var(--navy-dark) 0%, var(--navy) 50%, var(--navy-light) 100%);
+  padding: 100px 24px 80px;
+  text-align: center;
+  position: relative;
+  overflow: hidden;
+}
+
+.hero::before {
+  content: '';
+  position: absolute;
+  top: -50%;
+  right: -20%;
+  width: 600px;
+  height: 600px;
+  background: radial-gradient(circle, rgba(232,160,37,0.1) 0%, transparent 70%);
+  border-radius: 50%;
+}
+
+.hero::after {
+  content: '';
+  position: absolute;
+  bottom: -30%;
+  left: -10%;
+  width: 400px;
+  height: 400px;
+  background: radial-gradient(circle, rgba(232,160,37,0.08) 0%, transparent 70%);
+  border-radius: 50%;
+}
+
+.hero-content {
+  position: relative;
+  z-index: 1;
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.hero-badge {
+  display: inline-block;
+  background: rgba(232,160,37,0.15);
+  color: var(--gold-light);
+  padding: 6px 20px;
+  border-radius: 50px;
+  font-size: 13px;
+  font-weight: 600;
+  letter-spacing: 1px;
+  margin-bottom: 24px;
+}
+
+.hero h1 {
+  font-size: 40px;
+  font-weight: 900;
+  color: var(--white);
+  line-height: 1.4;
+  margin-bottom: 20px;
+  letter-spacing: 2px;
+}
+
+.hero h1 .accent {
+  color: var(--gold);
+}
+
+.hero p {
+  font-size: 16px;
+  color: rgba(255,255,255,0.75);
+  font-weight: 400;
+  line-height: 1.8;
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+/* ===== STATS ===== */
+.stats {
+  max-width: 900px;
+  margin: -40px auto 0;
+  padding: 0 24px;
+  position: relative;
+  z-index: 2;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+}
+
+.stat-card {
+  background: var(--white);
+  border-radius: 16px;
+  padding: 28px 20px;
+  text-align: center;
+  box-shadow: var(--shadow-lg);
+  transition: transform 0.3s;
+}
+
+.stat-card:hover {
+  transform: translateY(-4px);
+}
+
+.stat-icon {
+  width: 48px;
+  height: 48px;
+  margin: 0 auto 12px;
+  background: var(--gold-pale);
+  border-radius: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.stat-icon svg {
+  width: 24px;
+  height: 24px;
+  stroke: var(--gold);
+  fill: none;
+  stroke-width: 2;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+}
+
+.stat-value {
+  font-size: 20px;
+  font-weight: 700;
+  color: var(--navy);
+  margin-bottom: 4px;
+}
+
+.stat-label {
+  font-size: 13px;
+  color: var(--gray-600);
+  font-weight: 400;
+}
+
+/* ===== SECTIONS ===== */
+.section {
+  padding: 80px 24px;
+}
+
+.section-alt {
+  background: var(--gray-50);
+}
+
+.section-inner {
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+.section-header {
+  text-align: center;
+  margin-bottom: 48px;
+}
+
+.section-header h2 {
+  font-size: 28px;
+  font-weight: 700;
+  color: var(--navy);
+  margin-bottom: 8px;
+  letter-spacing: 1px;
+}
+
+.section-header .en {
+  font-size: 12px;
+  font-weight: 600;
+  color: var(--gold);
+  letter-spacing: 3px;
+  text-transform: uppercase;
+  display: block;
+  margin-bottom: 8px;
+}
+
+.section-header p {
+  font-size: 15px;
+  color: var(--gray-600);
+}
+
+/* ===== SERVICES ===== */
+.services-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 28px;
+}
+
+.service-card {
+  background: var(--white);
+  border-radius: 16px;
+  padding: 40px 32px;
+  box-shadow: var(--shadow);
+  transition: transform 0.3s, box-shadow 0.3s;
+  border: 1px solid var(--gray-100);
+}
+
+.service-card:hover {
+  transform: translateY(-4px);
+  box-shadow: var(--shadow-lg);
+}
+
+.service-icon {
+  width: 64px;
+  height: 64px;
+  background: linear-gradient(135deg, var(--navy), var(--navy-light));
+  border-radius: 16px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 24px;
+}
+
+.service-icon svg {
+  width: 32px;
+  height: 32px;
+  stroke: var(--gold);
+  fill: none;
+  stroke-width: 1.5;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+}
+
+.service-card h3 {
+  font-size: 20px;
+  font-weight: 700;
+  color: var(--navy);
+  margin-bottom: 12px;
+}
+
+.service-card p {
+  font-size: 14px;
+  color: var(--gray-700);
+  line-height: 1.8;
+}
+
+.service-tags {
+  margin-top: 16px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.service-tag {
+  display: inline-block;
+  background: var(--gold-pale);
+  color: var(--gold);
+  font-size: 12px;
+  font-weight: 600;
+  padding: 4px 12px;
+  border-radius: 50px;
+}
+
+/* ===== COMPANY ===== */
+.company-table-wrap {
+  background: var(--white);
+  border-radius: 16px;
+  overflow: hidden;
+  box-shadow: var(--shadow);
+  border: 1px solid var(--gray-100);
+}
+
+.company-table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.company-table th,
+.company-table td {
+  padding: 18px 24px;
+  font-size: 14px;
+  text-align: left;
+  border-bottom: 1px solid var(--gray-100);
+}
+
+.company-table tr:last-child th,
+.company-table tr:last-child td {
+  border-bottom: none;
+}
+
+.company-table th {
+  background: var(--navy);
+  color: var(--white);
+  font-weight: 600;
+  width: 180px;
+  white-space: nowrap;
+  vertical-align: top;
+}
+
+.company-table td {
+  color: var(--gray-800);
+}
+
+/* ===== RECRUIT ===== */
+.recruit-card {
+  background: var(--white);
+  border-radius: 16px;
+  overflow: hidden;
+  box-shadow: var(--shadow);
+  border: 1px solid var(--gray-100);
+}
+
+.recruit-header {
+  background: linear-gradient(135deg, var(--navy-dark), var(--navy));
+  padding: 32px;
+  color: var(--white);
+}
+
+.recruit-header h3 {
+  font-size: 22px;
+  font-weight: 700;
+  margin-bottom: 8px;
+}
+
+.recruit-header p {
+  font-size: 14px;
+  color: rgba(255,255,255,0.7);
+}
+
+.recruit-body {
+  padding: 32px;
+}
+
+.recruit-items {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 20px;
+}
+
+.recruit-item {
+  display: flex;
+  align-items: flex-start;
+  gap: 12px;
+}
+
+.recruit-item-icon {
+  width: 36px;
+  height: 36px;
+  min-width: 36px;
+  background: var(--gold-pale);
+  border-radius: 8px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.recruit-item-icon svg {
+  width: 18px;
+  height: 18px;
+  stroke: var(--gold);
+  fill: none;
+  stroke-width: 2;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+}
+
+.recruit-item-label {
+  font-size: 12px;
+  color: var(--gray-600);
+  font-weight: 500;
+  margin-bottom: 2px;
+}
+
+.recruit-item-value {
+  font-size: 15px;
+  font-weight: 600;
+  color: var(--navy);
+}
+
+.recruit-note {
+  margin-top: 24px;
+  padding: 16px 20px;
+  background: var(--gold-pale);
+  border-radius: 12px;
+  font-size: 14px;
+  color: var(--gray-700);
+  text-align: center;
+}
+
+.recruit-note strong {
+  color: var(--gold);
+}
+
+/* ===== CONTACT ===== */
+.contact-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 28px;
+}
+
+.contact-card {
+  background: var(--white);
+  border-radius: 16px;
+  padding: 32px;
+  box-shadow: var(--shadow);
+  border: 1px solid var(--gray-100);
+  text-align: center;
+}
+
+.contact-card-icon {
+  width: 56px;
+  height: 56px;
+  margin: 0 auto 16px;
+  background: linear-gradient(135deg, var(--navy), var(--navy-light));
+  border-radius: 14px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.contact-card-icon svg {
+  width: 28px;
+  height: 28px;
+  stroke: var(--gold);
+  fill: none;
+  stroke-width: 1.5;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+}
+
+.contact-card h3 {
+  font-size: 13px;
+  font-weight: 600;
+  color: var(--gray-600);
+  margin-bottom: 8px;
+  letter-spacing: 1px;
+}
+
+.contact-card .value {
+  font-size: 20px;
+  font-weight: 700;
+  color: var(--navy);
+}
+
+.contact-card .value a {
+  color: var(--navy);
+  text-decoration: none;
+}
+
+.contact-card .value a:hover {
+  color: var(--gold);
+}
+
+.contact-card .sub {
+  font-size: 13px;
+  color: var(--gray-600);
+  margin-top: 4px;
+}
+
+.contact-address {
+  grid-column: 1 / -1;
+}
+
+/* ===== FOOTER ===== */
+.footer {
+  background: var(--navy-dark);
+  padding: 48px 24px 24px;
+  color: rgba(255,255,255,0.6);
+}
+
+.footer-inner {
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+.footer-top {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding-bottom: 32px;
+  border-bottom: 1px solid rgba(255,255,255,0.1);
+  margin-bottom: 24px;
+}
+
+.footer-logo {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.footer-logo .logo-icon {
+  background: rgba(255,255,255,0.1);
+  color: var(--gold);
+}
+
+.footer-logo .logo-text {
+  color: var(--white);
+  font-weight: 700;
+  font-size: 18px;
+  letter-spacing: 1px;
+}
+
+.footer-nav {
+  display: flex;
+  gap: 24px;
+}
+
+.footer-nav a {
+  color: rgba(255,255,255,0.6);
+  text-decoration: none;
+  font-size: 13px;
+  transition: color 0.2s;
+}
+
+.footer-nav a:hover {
+  color: var(--gold);
+}
+
+.footer-bottom {
+  text-align: center;
+  font-size: 12px;
+}
+
+/* ===== RESPONSIVE ===== */
+@media (max-width: 768px) {
+  .hamburger {
+    display: flex;
+  }
+
+  .nav {
+    position: fixed;
+    top: 0;
+    right: -100%;
+    width: 280px;
+    height: 100vh;
+    background: var(--white);
+    flex-direction: column;
+    justify-content: center;
+    gap: 32px;
+    padding: 40px;
+    box-shadow: -4px 0 20px rgba(0,0,0,0.1);
+    transition: right 0.3s ease;
+  }
+
+  .nav.open {
+    right: 0;
+  }
+
+  .nav a {
+    font-size: 16px;
+  }
+
+  .overlay {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0,0,0,0.4);
+    z-index: 999;
+  }
+
+  .overlay.active {
+    display: block;
+  }
+
+  .hero {
+    padding: 72px 24px 60px;
+  }
+
+  .hero h1 {
+    font-size: 26px;
+  }
+
+  .hero p {
+    font-size: 14px;
+  }
+
+  .stats {
+    grid-template-columns: 1fr;
+    gap: 12px;
+    margin-top: -24px;
+  }
+
+  .stat-card {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    padding: 20px;
+    text-align: left;
+  }
+
+  .stat-icon {
+    margin: 0;
+  }
+
+  .section {
+    padding: 56px 16px;
+  }
+
+  .section-header h2 {
+    font-size: 22px;
+  }
+
+  .services-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .service-card {
+    padding: 28px 24px;
+  }
+
+  .company-table th {
+    width: 120px;
+    padding: 14px 16px;
+    font-size: 13px;
+  }
+
+  .company-table td {
+    padding: 14px 16px;
+    font-size: 13px;
+  }
+
+  .recruit-items {
+    grid-template-columns: 1fr;
+  }
+
+  .contact-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .footer-top {
+    flex-direction: column;
+    gap: 24px;
+    text-align: center;
+  }
+
+  .footer-nav {
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+}
+
+@media (max-width: 480px) {
+  .hero h1 {
+    font-size: 22px;
+  }
+
+  .company-table th,
+  .company-table td {
+    display: block;
+    width: 100%;
+  }
+
+  .company-table th {
+    padding-bottom: 4px;
+    border-bottom: none;
+  }
+
+  .company-table td {
+    padding-top: 4px;
+    padding-bottom: 16px;
+  }
+}
+</style>
+</head>
+<body>
+
+<!-- Overlay for mobile menu -->
+<div class="overlay" id="overlay"></div>
+
+<!-- ===== HEADER ===== -->
+<header class="header">
+  <div class="header-inner">
+    <a href="#" class="logo">
+      <div class="logo-icon">OK</div>
+      <span class="logo-text">OKIDAI</span>
+    </a>
+    <nav class="nav" id="nav">
+      <a href="#services">事業内容</a>
+      <a href="#company">会社概要</a>
+      <a href="#recruit">採用情報</a>
+      <a href="#contact">お問い合わせ</a>
+    </nav>
+    <button class="hamburger" id="hamburger" aria-label="メニュー">
+      <span></span>
+      <span></span>
+      <span></span>
+    </button>
+  </div>
+</header>
+
+<!-- ===== HERO ===== -->
+<section class="hero">
+  <div class="hero-content">
+    <span class="hero-badge">ジャパントラフィックグループ</span>
+    <h1>確かな技術と信頼で、<br><span class="accent">現場を支える。</span></h1>
+    <p>愛知県一宮市を拠点に、とび・土工工事とユニック車オペレーションで<br>建設現場の安全と効率を支えています。</p>
+  </div>
+</section>
+
+<!-- ===== STATS ===== -->
+<div class="stats">
+  <div class="stat-card">
+    <div class="stat-icon">
+      <svg viewBox="0 0 24 24"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+    </div>
+    <div>
+      <div class="stat-value">0586-82-6785</div>
+      <div class="stat-label">お電話でのお問い合わせ</div>
+    </div>
+  </div>
+  <div class="stat-card">
+    <div class="stat-icon">
+      <svg viewBox="0 0 24 24"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+    </div>
+    <div>
+      <div class="stat-value">愛知県一宮市</div>
+      <div class="stat-label">拠点所在地</div>
+    </div>
+  </div>
+  <div class="stat-card">
+    <div class="stat-icon">
+      <svg viewBox="0 0 24 24"><rect x="2" y="7" width="20" height="14" rx="2" ry="2"/><path d="M16 21V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16"/></svg>
+    </div>
+    <div>
+      <div class="stat-value">2つの事業</div>
+      <div class="stat-label">ユニック車 / とび・土工</div>
+    </div>
+  </div>
+</div>
+
+<!-- ===== SERVICES ===== -->
+<section class="section section-alt" id="services">
+  <div class="section-inner">
+    <div class="section-header">
+      <span class="en">Services</span>
+      <h2>事業内容</h2>
+      <p>専門性の高い2つの事業で、建設現場をトータルサポートいたします。</p>
+    </div>
+    <div class="services-grid">
+      <div class="service-card">
+        <div class="service-icon">
+          <svg viewBox="0 0 24 24"><path d="M9 18V6l12 6-12 6z" fill="none"/><rect x="2" y="4" width="6" height="16" rx="1" fill="none"/><path d="M14 10h4M14 14h3"/><circle cx="18" cy="18" r="2"/><circle cx="6" cy="18" r="2"/></svg>
+        </div>
+        <h3>ユニック車オペレーション</h3>
+        <p>クレーン付きトラック（ユニック車）を使用した荷揚げ・搬入作業を行います。住宅設備や家電製品の搬入など、幅広い現場ニーズに対応。経験豊富なオペレーターが安全かつ効率的に作業を遂行します。</p>
+        <div class="service-tags">
+          <span class="service-tag">荷揚げ</span>
+          <span class="service-tag">搬入作業</span>
+          <span class="service-tag">住宅設備</span>
+          <span class="service-tag">家電搬入</span>
+        </div>
+      </div>
+      <div class="service-card">
+        <div class="service-icon">
+          <svg viewBox="0 0 24 24"><path d="M2 20h20"/><path d="M5 20V8l7-5 7 5v12"/><path d="M9 20v-6h6v6"/><path d="M9 12h6"/><path d="M12 3v3"/></svg>
+        </div>
+        <h3>とび・土工工事</h3>
+        <p>足場工事、基礎工事、土工事、コンクリート工事など、建設現場の基盤となる工事を手がけています。安全管理を徹底し、品質の高い施工で現場の進行を支えます。</p>
+        <div class="service-tags">
+          <span class="service-tag">足場工事</span>
+          <span class="service-tag">基礎工事</span>
+          <span class="service-tag">土工事</span>
+          <span class="service-tag">コンクリート</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== COMPANY ===== -->
+<section class="section" id="company">
+  <div class="section-inner">
+    <div class="section-header">
+      <span class="en">Company</span>
+      <h2>会社概要</h2>
+    </div>
+    <div class="company-table-wrap">
+      <table class="company-table">
+        <tr><th>会社名</th><td>株式会社OKIDAI</td></tr>
+        <tr><th>代表取締役</th><td>沖野 誠</td></tr>
+        <tr><th>所在地</th><td>〒491-0024　愛知県一宮市富士四丁目4番地20</td></tr>
+        <tr><th>TEL</th><td>0586-82-6785</td></tr>
+        <tr><th>FAX</th><td>0586-82-6786</td></tr>
+        <tr><th>E-mail</th><td>info@okidai.jp</td></tr>
+        <tr><th>グループ</th><td>ジャパントラフィックグループ</td></tr>
+        <tr><th>会社法人等番号</th><td>1800-01-131942</td></tr>
+        <tr><th>資本金</th><td>500万円</td></tr>
+        <tr><th>建設業許可</th><td>愛知県知事許可（般-30）第73844号</td></tr>
+        <tr><th>事業内容</th><td>とび・土工工事業、ユニック車オペレーション</td></tr>
+      </table>
+    </div>
+  </div>
+</section>
+
+<!-- ===== RECRUIT ===== -->
+<section class="section section-alt" id="recruit">
+  <div class="section-inner">
+    <div class="section-header">
+      <span class="en">Recruit</span>
+      <h2>採用情報</h2>
+      <p>一緒に現場を支える仲間を募集しています。</p>
+    </div>
+    <div class="recruit-card">
+      <div class="recruit-header">
+        <h3>ユニック車オペレーター募集</h3>
+        <p>業務委託｜経験者歓迎・Wワーク / 副業OK</p>
+      </div>
+      <div class="recruit-body">
+        <div class="recruit-items">
+          <div class="recruit-item">
+            <div class="recruit-item-icon">
+              <svg viewBox="0 0 24 24"><line x1="12" y1="1" x2="12" y2="23"/><path d="M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"/></svg>
+            </div>
+            <div>
+              <div class="recruit-item-label">報酬</div>
+              <div class="recruit-item-value">時給 2,500円</div>
+            </div>
+          </div>
+          <div class="recruit-item">
+            <div class="recruit-item-icon">
+              <svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+            </div>
+            <div>
+              <div class="recruit-item-label">勤務時間</div>
+              <div class="recruit-item-value">8:00〜18:00</div>
+            </div>
+          </div>
+          <div class="recruit-item">
+            <div class="recruit-item-icon">
+              <svg viewBox="0 0 24 24"><rect x="3" y="4" width="18" height="18" rx="2" ry="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg>
+            </div>
+            <div>
+              <div class="recruit-item-label">勤務日</div>
+              <div class="recruit-item-value">要相談</div>
+            </div>
+          </div>
+          <div class="recruit-item">
+            <div class="recruit-item-icon">
+              <svg viewBox="0 0 24 24"><path d="M16 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="8.5" cy="7" r="4"/><polyline points="17 11 19 13 23 9"/></svg>
+            </div>
+            <div>
+              <div class="recruit-item-label">契約形態</div>
+              <div class="recruit-item-value">業務委託</div>
+            </div>
+          </div>
+        </div>
+        <div class="recruit-note">
+          <strong>Wワーク・副業OK!</strong>　お気軽にお問い合わせください。
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== CONTACT ===== -->
+<section class="section" id="contact">
+  <div class="section-inner">
+    <div class="section-header">
+      <span class="en">Contact</span>
+      <h2>お問い合わせ</h2>
+      <p>ご質問・ご依頼はお電話またはメールにてお気軽にどうぞ。</p>
+    </div>
+    <div class="contact-grid">
+      <div class="contact-card">
+        <div class="contact-card-icon">
+          <svg viewBox="0 0 24 24"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+        </div>
+        <h3>TEL</h3>
+        <div class="value"><a href="tel:0586-82-6785">0586-82-6785</a></div>
+      </div>
+      <div class="contact-card">
+        <div class="contact-card-icon">
+          <svg viewBox="0 0 24 24"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+        </div>
+        <h3>E-MAIL</h3>
+        <div class="value"><a href="mailto:info@okidai.jp">info@okidai.jp</a></div>
+      </div>
+      <div class="contact-card">
+        <div class="contact-card-icon">
+          <svg viewBox="0 0 24 24"><path d="M6 2L3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4z"/><line x1="3" y1="6" x2="21" y2="6"/><path d="M16 10a4 4 0 0 1-8 0"/></svg>
+        </div>
+        <h3>FAX</h3>
+        <div class="value">0586-82-6786</div>
+      </div>
+      <div class="contact-card contact-address">
+        <div class="contact-card-icon">
+          <svg viewBox="0 0 24 24"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+        </div>
+        <h3>所在地</h3>
+        <div class="value" style="font-size:16px;">〒491-0024　愛知県一宮市富士四丁目4番地20</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== FOOTER ===== -->
+<footer class="footer">
+  <div class="footer-inner">
+    <div class="footer-top">
+      <div class="footer-logo">
+        <div class="logo-icon">OK</div>
+        <span class="logo-text">OKIDAI</span>
+      </div>
+      <nav class="footer-nav">
+        <a href="#services">事業内容</a>
+        <a href="#company">会社概要</a>
+        <a href="#recruit">採用情報</a>
+        <a href="#contact">お問い合わせ</a>
+      </nav>
+    </div>
+    <div class="footer-bottom">
+      &copy; 2026 株式会社OKIDAI. All rights reserved.
+    </div>
+  </div>
+</footer>
+
+<script>
+(function() {
+  const hamburger = document.getElementById('hamburger');
+  const nav = document.getElementById('nav');
+  const overlay = document.getElementById('overlay');
+
+  function toggleMenu() {
+    hamburger.classList.toggle('active');
+    nav.classList.toggle('open');
+    overlay.classList.toggle('active');
+    document.body.style.overflow = nav.classList.contains('open') ? 'hidden' : '';
+  }
+
+  function closeMenu() {
+    hamburger.classList.remove('active');
+    nav.classList.remove('open');
+    overlay.classList.remove('active');
+    document.body.style.overflow = '';
+  }
+
+  hamburger.addEventListener('click', toggleMenu);
+  overlay.addEventListener('click', closeMenu);
+
+  // Close menu on nav link click
+  nav.querySelectorAll('a').forEach(function(link) {
+    link.addEventListener('click', closeMenu);
+  });
+
+  // Header scroll effect
+  window.addEventListener('scroll', function() {
+    var header = document.querySelector('.header');
+    if (window.scrollY > 10) {
+      header.style.boxShadow = '0 2px 20px rgba(0,0,0,0.1)';
+    } else {
+      header.style.boxShadow = '0 2px 12px rgba(0,0,0,0.06)';
+    }
+  });
+})();
+</script>
+
+</body>
+</html>
