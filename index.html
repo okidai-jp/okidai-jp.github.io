@@ -487,7 +487,7 @@ body {
 /* ===== CONTACT ===== */
 .contact-grid {
   display: grid;
-  grid-template-columns: repeat(2, 1fr);
+  grid-template-columns: repeat(3, 1fr);
   gap: 28px;
 }
 
@@ -550,9 +550,6 @@ body {
   margin-top: 4px;
 }
 
-.contact-address {
-  grid-column: 1 / -1;
-}
 
 /* ===== FOOTER ===== */
 .footer {
@@ -703,6 +700,10 @@ body {
 
   .contact-grid {
     grid-template-columns: 1fr;
+  }
+
+  .contact-address {
+    grid-column: auto;
   }
 
   .footer-top {
@@ -1027,13 +1028,22 @@ body {
         <h3>FAX</h3>
         <div class="value">0586-82-6786</div>
       </div>
-      <div class="contact-card contact-address">
+    </div>
+    <div style="display:grid; grid-template-columns:1fr 1fr; gap:28px; margin-top:28px;">
+      <div class="contact-card">
         <div class="contact-card-icon">
           <svg viewBox="0 0 24 24"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
         </div>
         <h3>所在地</h3>
-        <div class="value" style="font-size:16px;">〒491-0024　愛知県一宮市富士四丁目4番地20</div>
+        <div class="value" style="font-size:15px;">〒491-0024<br>愛知県一宮市富士四丁目4番地20</div>
       </div>
+      <a href="https://www.google.com/maps/search/?api=1&query=愛知県一宮市富士四丁目4番地20" target="_blank" rel="noopener" class="contact-card" style="text-decoration:none; transition:transform 0.3s, box-shadow 0.3s; cursor:pointer;">
+        <div class="contact-card-icon" style="background:linear-gradient(135deg, #34a853, #4285f4);">
+          <svg viewBox="0 0 24 24" style="stroke:#fff;"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+        </div>
+        <h3>Google Map</h3>
+        <div class="value" style="font-size:14px; color:var(--navy-light);">地図で見る →</div>
+      </a>
     </div>
   </div>
 </section>
